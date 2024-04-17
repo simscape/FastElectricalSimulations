@@ -1,0 +1,52 @@
+component controlled_switch_with_diode
+% Switch
+% The block represents a switch controlled by an external physical
+% signal and a antiparallel diode. If the external physical signal PS is greater than the threshold,
+% then the switch is closed, otherwise the switch is open.
+%
+% The closed resistance is defined by parameter R_closed, and the open
+% conductance is defined by parameter G_open. Both parameters must be
+% greater than zero.
+
+% Copyright 2023-2024 The MathWorks, Inc.
+
+inputs
+    vT = { 0.0, '1' }; % PS:bottom
+end
+
+nodes
+    p = foundation.electrical.electrical; % :top
+    n = foundation.electrical.electrical; % :bottom
+end
+
+parameters
+    R_closed = { 0.01, 'Ohm' };   % Closed resistance R_closed
+    G_open   = { 1e-8, '1/Ohm' }; % Open conductance G_open
+    Threshold = { 0.5, '1' };     % Threshold
+end
+
+variables
+    i = { 0, 'A' }; % Current
+    v = { 0, 'V' }; % Voltage
+end
+
+branches
+    i : p.i -> n.i;
+end
+
+intermediates
+     power_dissipated = v*i; % Dissipated power
+end
+
+equations
+    assert(R_closed>0)
+    assert(G_open>0)
+    v == p.v - n.v;
+    if vT > Threshold || v < 0 % Switch is closed
+        v == i*R_closed;
+    else              % Switch is open
+        v*G_open == i;
+    end
+end
+
+end
