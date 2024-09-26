@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Info File="liveScripts/PMSM_Inverter_Guide.mlx" GroupUUID="edc5eb32-63f9-4e19-8252-183cc8e020b1" Icon="" Name="PMSM_Inverter_Guide" Type="Basic" Visible="1">
     <Extension Name="StartUpPrev" Value="074fd251-e753-411a-97b0-94406dcd9dcc"/>
 </Info>
