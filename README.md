@@ -160,7 +160,7 @@ This chapter gives an overview on solver and model considerations when simulatin
 
 ## 9) Simscape to HDL
 To run this chapter, please first start “PMSM_FPGA_HIL_Demo.prj” inside the corresponding folder “_9_SimscapeToHDL”.  
-Please see [this in-product example](https://www.mathworks.com/help/hdlcoder/ug/generate-hdl-code-for-simscape-models-using-linearized-switch-approximation.html) for an introduction to this method. This demo project extends the previous example comparing different approaches, and adding further steps for code generation and deployment to complete a full workflow for FPGA-based HIL.
+Please see [this in-product example](https://www.mathworks.com/help/releases/R2024a/hdlcoder/ug/generate-hdl-code-for-simscape-models-using-linearized-switch-approximation.html) for an introduction to this method. This demo project extends the previous example comparing different approaches, and adding further steps for code generation and deployment to complete a full workflow for FPGA-based HIL.
 ![m01_PMSM_Desktop](html/m01_PMSM_Desktop.png)
 
 ### Important technical background
